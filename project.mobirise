@@ -44,13 +44,15 @@
     ],
     "uniqCompNum": 38,
     "versionPublish": "4.10.5",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "favicon": "@PROJECT_PATH@/assets/images/gsl-logo-128x64.png",
+    "noImageResize": ""
   },
   "pages": {
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Home",
+        "title": "GSL Team Room",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
