@@ -1454,6 +1454,14 @@ body {
   font-size: 60px;
   color: #777;
 }
+.cid-s29HYnnfJB {
+  padding-top: 60px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.cid-s29HYnnfJB .mbr-section-subtitle {
+  color: #767676;
+}
 .cid-s25crIxvDk {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -1472,13 +1480,80 @@ body {
 .cid-s25crIxvDk .mbr-section-btn {
   color: #efefef;
 }
-.cid-s25elxl7pe {
-  padding-top: 60px;
-  padding-bottom: 0px;
+.cid-s29GDu9tf8 {
+  padding-top: 90px;
+  padding-bottom: 30px;
   background-color: #ffffff;
 }
-.cid-s25elxl7pe .mbr-section-subtitle {
-  color: #767676;
+.cid-s29GDu9tf8 .mbr-section-title,
+.cid-s29GDu9tf8 .mbr-section-subtitle {
+  color: #000000;
+}
+.cid-s29GDu9tf8 .mbr-section-text {
+  color: #232323;
+}
+.cid-s29GDu9tf8 .mbr-text,
+.cid-s29GDu9tf8 .typed-text,
+.cid-s29GDu9tf8 .mbr-section-text {
+  letter-spacing: 0.03rem;
+}
+.cid-s29GDu9tf8 .btn {
+  margin-left: 4px !important;
+}
+.cid-s29GDu9tf8 .animated-element {
+  color: #68c4ed;
+}
+.cid-s29GDu9tf8 .typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  color: #68c4ed;
+}
+.cid-s29GDu9tf8 .mbr-figure {
+  border-radius: .25rem;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .cid-s29GDu9tf8 .typed-text,
+  .cid-s29GDu9tf8 .mbr-section-subtitle,
+  .cid-s29GDu9tf8 .mbr-section-text,
+  .cid-s29GDu9tf8 .mbr-section-btn {
+    text-align: center !important;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #custom-html-8 {
   /* Type valid CSS here */
