@@ -960,70 +960,6 @@
           ]
         },
         {
-          "alias": "mobirise4-blocks/components",
-          "_isSecondary": true,
-          "typeCompatible": "type",
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "img": {
-              "height": "300px",
-              "width": "100%",
-              "object-fit": "cover"
-            },
-            ".wrapper:before": {
-              "content": "''",
-              "display": "block",
-              "position": "absolute",
-              "transition": "opacity 0.0s",
-              "top": "0",
-              "right": "0",
-              "height": "100%",
-              "left": "0",
-              "background-color": "@boxColor",
-              "opacity": "0.0",
-              "pointer-events": "none"
-            },
-            ".row > div": {
-              "margin": "0",
-              "padding": "0",
-              "width": "100%",
-              "position": "relative",
-              "& when (@slidesCount = 5)": {
-                "@media (min-width: 992px)": {
-                  "-ms-flex": "0 0 20%",
-                  "flex": "0 0 20%",
-                  "max-width": "20%"
-                }
-              },
-              "&:hover .wrapper:before": {
-                "opacity": "0.2"
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".wrapper:before": {
-                "opacity": "0.2"
-              }
-            }
-          },
-          "_name": "extGallery4",
-          "_customHTML": "<section class=\"extGallery\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-parallax-background': bg.parallax}\">\n\n  <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Items\" name=\"slidesCount\" min=\"1\" max=\"6\" step=\"1\" value=\"4\">\n    <input type=\"color\" title=\"Hover Color\" name=\"boxColor\" value=\"#ffffff\" selected>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background2-2.jpg\" parallax>\n      <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay&&bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n  </mbr-parameters>\n\n  <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n  <div class=\"container-fluid\">\n    <div class=\"row justify-content-center align-left\">\n\n      <div mbr-class=\"{'col-lg-2 col-md-6': slidesCount == 6, 'col-md-4': slidesCount == 5, 'col-lg-3 col-md-6': slidesCount == 4, 'col-lg-4 col-md-4': slidesCount == 3, 'col-md-6': slidesCount == 2}\">\n        <div class=\"wrapper\">\n          <img class=\"photo\" src=\"@PROJECT_PATH@/assets/images/82-parterreatticg-small1-336x240.jpg\" alt=\"Garden\" title>\n        </div>\n      </div>\n      <div mbr-class=\"{'col-lg-2 col-md-6': slidesCount == 6, 'col-md-4': slidesCount == 5, 'col-lg-3 col-md-6': slidesCount == 4, 'col-lg-4 col-md-4': slidesCount == 3, 'col-md-6': slidesCount == 2}\" mbr-if=\"slidesCount > 1\">\n        <div class=\"wrapper\">\n          <img class=\"photo\" src=\"@PROJECT_PATH@/assets/images/imgp3721-952x633.jpg\" alt=\"Roses\" title>\n        </div>\n      </div>\n      <div mbr-class=\"{'col-lg-2 col-md-6': slidesCount == 6, 'col-md-4': slidesCount == 5, 'col-lg-3 col-md-6': slidesCount == 4, 'col-lg-4 col-md-4': slidesCount == 3}\" mbr-if=\"slidesCount > 2\">\n        <div class=\"wrapper\">\n          <img class=\"photo\" src=\"@PROJECT_PATH@/assets/images/imgp3642-952x633.jpg\" alt=\"Roses\" title>\n        </div>\n      </div>\n      <div mbr-class=\"{'col-lg-2 col-md-6': slidesCount == 6, 'col-md-4': slidesCount == 5, 'col-lg-3 col-md-6': slidesCount == 4}\" mbr-if=\"slidesCount > 3\">\n        <div class=\"wrapper\">\n          <img class=\"photo\" src=\"@PROJECT_PATH@/assets/images/-mg-7514-952x635.jpg\" alt=\"Cake\" title>\n        </div>\n      </div>\n      <div mbr-class=\"{'col-lg-2 col-md-6': slidesCount == 6, 'col-md-4': slidesCount == 5}\" mbr-if=\"slidesCount > 4\">\n        <div class=\"wrapper\">\n          <img class=\"photo\" src=\"@PROJECT_PATH@/assets/images/05.jpg\" alt=\"Mobirise\">\n        </div>\n      </div>\n      <div class=\"col-lg-2 col-md-6\" mbr-if=\"slidesCount > 5\">\n        <div class=\"wrapper\">\n          <img class=\"photo\" src=\"@PROJECT_PATH@/assets/images/06.jpg\" alt=\"Mobirise\">\n        </div>\n      </div>\n\n    </div>\n  </div>\n</section>",
-          "_anchor": "extGallery4-12",
-          "_isUserblock": true,
-          "_sourceTheme": "agencym4",
-          "_cid": "s2acM98CoT",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
           "alias": false,
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
@@ -1035,7 +971,7 @@
           },
           "_name": "content4",
           "_sourceTheme": "mobirise4",
-          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    Article Title with Solid Background\n                </h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Shape your future web project with sharp design and refine coded functions.\n                </h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    Article Title with Solid Background\n                </h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Shape your future web project with sharp design and refine coded functions.\n                </h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "sAuVRD6jPY",
           "_protectedParams": [],
           "_global": false,
